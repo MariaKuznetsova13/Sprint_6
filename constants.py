@@ -1,10 +1,10 @@
 from locators.info_page_locators import InfoPageLocators
-from locators.base_page_locators import BasePageLocators
 from locators.order_page_locators import OrderPageLocators
 
 
 class Urls:
     MAIN_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/'
+    ORDER_PAGE_URL = 'https://qa-scooter.praktikum-services.ru/order'
     DZEN_REDIRECT_PAGE_URL = 'https://dzen.ru/?yredirect=true'
 
 
@@ -87,9 +87,8 @@ class FaqConstants:
 
 class ListOrders:
     # Данные для заказа самоката
-    LIST_ORDERS = [
-        {
-            'button': BasePageLocators.ORDER_BUTTON_HEADER,
+    LIST_ORDERS = {
+        'order_1': {
             'name': 'Мария',
             'surname': 'Попова',
             'address': 'Левашова 3',
@@ -100,8 +99,7 @@ class ListOrders:
             'color_checkbox_locator': OrderPageLocators.SCOOTER_BLACK_COLOR,
             'comment': 'Позвоните у дома'
         },
-        {
-            'button': BasePageLocators.ORDER_BUTTON_FOOTER,
+        'order_2': {
             'name': 'Ваня',
             'surname': 'Петров',
             'address': 'Суфтина 9',
@@ -112,4 +110,4 @@ class ListOrders:
             'color_checkbox_locator': OrderPageLocators.SCOOTER_GREY_COLOR,
             'comment': 'Спасибо за доставку'
         }
-        ]
+    }
